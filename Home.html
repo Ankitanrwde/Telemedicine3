@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemedicine System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Home.css">
+   
+    
+</head>
+<body style="width: 100%;">
+    <nav  class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="padding:10px;">
+        <div class="container-fluid">
+         <a class="navbar-brand fw-bold" href="#">
+            <img src="Images/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+          
+        </a>
+          <a class="navbar-brand" href="#">Telemedicine System</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav gap-4">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" style="font-weight: 500;">Find Doctors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#" style="font-weight: 500;">Health Records</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="container" id="home" >
+           
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home" style="font-weight: 500;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-us" style="font-weight: 500;">About Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html" style="font-weight: 500;">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="disease-prediction" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-weight: 500;">
+                            Disease Prediction
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="disease-prediction">
+                            <li><a class="dropdown-item" href="#" style="font-weight: 500;">Diabetes Prediction</a></li>
+                            <li><a class="dropdown-item" href="#" style="font-weight: 500;">Skin Disease Prediction</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown" >
+                        <Button class="btn custom-green-btn"> <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Login
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="loginDropdown">
+                            <li><a class="dropdown-item" href="PatientLogin.html">Patient Login</a></li>
+                            <li><a class="dropdown-item" href="DoctorLogin.html">Doctor Login</a></li>
+                        </ul>
+                    </Button>
+                       
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav> 
+    
+      
+        
+   
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Images/14570d858d6dc7e6398644b65b3cd00f.jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="Images/abstract-healthcare-innovation-medical-research-concept-dna-medical-icon-gene-editing-technology-interface-laboratory-on-blue-background-illustration-vector.jpg" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="Images/medical-banner-with-stethoscope_23-2149611199.avif" class="d-block w-100" alt="Slide 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      <!--sticky notes-->
+      <div class="carousel-overlay">
+        <div class="note">
+            <h3>Skin Disease Prediction</h3>
+            <p>Leverage AI to identify skin conditions early with high accuracy.</p>
+            <button class="btn btn-dark">Let's Predict</button>
+        </div>
+        <div class="note">
+            <h3>Diabetes Prediction</h3>
+            <p>Advanced screening tools to detect and prevent diabetes risks.</p>
+            <button class="btn btn-dark">Let's Predict</button>
+        </div>
+    </div>
+
+    </div>
+
+    <section class="about-us py-5 bg-light" id="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold">Who We Are</h2>
+                    <p>
+                        Welcome to <strong>Telemedicine System</strong>, a revolutionary healthcare platform specializing in AI-powered skin disease and diabetes prediction. Our mission is to empower individuals with accurate health assessments and guide them toward the right medical care.  
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold">Our Specialties</h2>
+                    <ul>
+                        <li><strong>Skin & Dermatology –</strong> Get Your skin Disease Prediction.</li>
+                        <li><strong>Diabetes Prediction –</strong> Get Your Diabetes Prediction</li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+
+         <div class="container mt-5">
+            <h2 class="mb-4 text-center">Why Choose Us?</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3"> <!-- Grid layout with equal-sized columns -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 p-3"> <!-- h-100 ensures equal height -->
+                        <h5 class="mb-2">✅ Convenient & Accessible</h5>
+                        <p class="mb-0">Skip the long hospital queues.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 p-3">
+                        <h5 class="mb-2">✅ Nearby Healthcare Providers</h5>
+                        <p class="mb-0">Get recommendations for the best doctors near you.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 p-3">
+                        <h5 class="mb-2">✅ Secure Health Records</h5>
+                        <p class="mb-0">Your medical data is confidential and securely stored.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 p-3">
+                        <h5 class="mb-2">✅ Affordable Care</h5>
+                        <p class="mb-0">Get high-quality healthcare.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+  
+
+    <!--FOOTER-->
+    <footer class="bg-dark text-light py-4 mt-5" style="margin-bottom: -4em;">
+        <div class="container">
+            <div class="row">
+                <!-- Company Logo & About -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Telemedicine System</h5>
+                    <p>Your trusted online health care platform.</p>
+                </div>
+    
+                <!-- Quick Links -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="Home.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="Home.html#about-us" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="#" class="text-light text-decoration-none"> Disease Prediction</a></li>
+                        <li><a href="Contact.html" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Info & Social Media -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Contact Us</h5>
+                    <p>Email: narwadeankita22@gmail.com</p>
+                    <p>Email:priyanka.kalshetti02@gmail.com</p>
+                    <div>
+                        <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-light me-2"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Copyright Section -->
+            <div class="text-center pt-3">
+                <p class="mb-0">&copy; All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap Icons CDN (For Social Media Icons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

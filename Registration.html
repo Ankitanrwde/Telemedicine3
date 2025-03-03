@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Login Page</title>
+    
+    <link rel="stylesheet" href="Registration.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Ensure Navbar Stays Fixed */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+            padding: 10px 0;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            padding-top: 80px; /* Prevent content from hiding under navbar */
+            background-color: #f8f9fa;
+        }
+
+        .custom-green-btn {
+            background-color: rgba(0, 122, 128, 0.85);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .custom-green-btn:hover {
+            background-color: #215a88;
+        }
+
+        /* Align "Find Doctors" & "Health Records" to the Left */
+        .left-nav-links {
+            margin-right: auto; /* Push other items to the right */
+        }
+
+        
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.29);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /* Ensure labels are on the left */
+label {
+    display: block;  /* Ensures label appears above input */
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Grouping Label and Input */
+.form-group {
+    margin-bottom: 15px; /* Adds spacing between fields */
+}
+/* Add space between input fields */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;  /* Adds space between fields */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="Images/logo.png" alt="Practo Logo" width="50" height="50" class="d-inline-block align-text-top">
+            </a>
+            <a class="navbar-brand" href="#">Telemedicine System</a>
+
+            <!-- Toggler Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav gap-4 left-nav-links">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold" href="#">Find Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold" href="#">Health Records</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ms-auto gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="Home.html#about-us">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#">Contact Us</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="disease-prediction" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Disease Prediction
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Diabetes Prediction</a></li>
+                            <li><a class="dropdown-item" href="#">Skin Disease Prediction</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <button class="btn custom-green-btn">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Login
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="PatientLogin.html">Patient Login</a></li>
+                                <li><a class="dropdown-item" href="DoctorLogin.html">Doctor Login</a></li>
+                            </ul>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Registration Form -->
+    <div class="container" style="">
+        <h2>Telemedicine System Registration</h2>
+        <form id="regForm">
+            
+            <!-- Personal Details -->
+            <h3>Personal Information</h3>
+            <input type="text" placeholder="Full Name" name="name" required>
+            <input type="text" placeholder="Address" name="address" required>
+            <input type="tel" placeholder="Personal Mobile Number" name="mobile" required>
+            <input type="tel" placeholder="Emergency Mobile Number" name="emergency_mobile" required>
+            <!-- Gender Field -->
+<label for="gender" style="text-align: left;">Gender:</label>
+<select id="gender" required>
+    <option value="">Select Gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+</select>
+
+<!-- Date of Birth Field with Calendar Input -->
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" required>
+
+
+            <!-- Medical Details -->
+            <h3>Medical Information</h3>
+            <label>Blood Group:</label>
+            <select name="blood_group" required>
+                <option value="" disabled selected>Select Blood Group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+
+            <input type="text" placeholder="Allergies (if any)" name="allergies">
+            <input type="text" placeholder="Chronic Diseases (e.g. Diabetes, Hypertension)" name="chronic_diseases">
+            <input type="text" placeholder="Current Medications" name="medications">
+            <!-- Past Surgeries Field -->
+            <label for="past-surgeries">Past Surgeries:</label>
+            <input type="text" id="past-surgeries" placeholder="Mention any past surgeries">
+
+
+            <label>Height (cm):</label>
+            <input type="number" name="height" min="50" max="250" required>
+
+            <label>Weight (kg):</label>
+            <input type="number" name="weight" min="20" max="200" required>
+
+            
+
+            <!-- Lifestyle Factors -->
+            <h3>Lifestyle Factors</h3>
+            <label>Smoking:</label>
+            <select name="smoking" required>
+                <option value="" disabled selected>Do you smoke?</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Alcohol Consumption:</label>
+            <select name="alcohol" required>
+                <option value="" disabled selected>Do you consume alcohol?</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Exercise Habits:</label>
+            <select name="exercise" required>
+                <option value="" disabled selected>Select Exercise Habits</option>
+                <option value="Regular">Regular</option>
+                <option value="Occasional">Occasional</option>
+                <option value="None">None</option>
+            </select>
+
+            <!-- Account Details -->
+            <h3>Account Setup</h3>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <input type="password" placeholder="Confirm Password" name="confirm_password" required>
+
+            <button type="submit">Register</button>
+
+        </form>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
